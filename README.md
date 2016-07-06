@@ -38,7 +38,9 @@ If you need to use Bower, run the following commands :
 
 ```
 npm install bower //if bower isn't already install
+
 bower init
+
 bower install package --save-dev //bootstrap, fontawesome for example
 ```
 
