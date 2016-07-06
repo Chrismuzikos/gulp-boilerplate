@@ -34,7 +34,7 @@ gulp
 
 ### Step 3
 
-If you need to use Bower, run the following :
+If you need to use Bower, run the following commands :
 
 ```
 npm install bower //if bower isn't already install
