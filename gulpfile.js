@@ -62,10 +62,12 @@ gulp.task('js', function() {
   return gulp.src(config.paths.source + '/js/**/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
-    .pipe(concat('script.js'))
+    .pipe(concat('script.min.js'))
     .pipe(gulp.dest(config.paths.distribution + '/js'))
-    .pipe(rename({suffix: '.min'}))
+    // .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.paths.distribution + '/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
