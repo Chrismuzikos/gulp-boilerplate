@@ -39,7 +39,7 @@ If you need to use Bower, run the following commands :
 ```
 npm install bower //if bower isn't already install
 bower init
-bower install package -save-dev //bootstrap, fontawesome for example
+bower install package --save-dev //bootstrap, fontawesome for example
 ```
 
 and fill the path of the css and js files in the file gulp-config.json like this :
