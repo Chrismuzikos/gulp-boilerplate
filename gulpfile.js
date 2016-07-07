@@ -43,6 +43,7 @@ gulp.task('css', function() {
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.paths.distribution + '/css'))
+    .pipe(livereload())
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
@@ -69,6 +70,7 @@ gulp.task('js', function() {
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.paths.distribution + '/js'))
+    .pipe(livereload())
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -77,6 +79,7 @@ gulp.task('img', function() {
   return gulp.src(config.paths.source + '/img/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     .pipe(gulp.dest(config.paths.distribution + '/img'))
+    .pipe(livereload())
     .pipe(notify({ message: 'Images task complete' }));
 });
 
@@ -86,6 +89,7 @@ gulp.task('cp-fonts', function () {
 		'bower_components/bootstrap-sass-official/assets/fonts/**/*',
 		'bower_components/font-awesome/fonts/**/*',
 	] ).pipe( copy( config.paths.distribution + '/fonts/' , { prefix : 10 } ) )
+  .pipe(livereload())
   .pipe(notify({ message: 'Copy fonts task complete' }));
 });
 
@@ -93,11 +97,14 @@ gulp.task('cp-fonts', function () {
 gulp.task('cp-html', function () {
   gulp.src(config.paths.source + '/*.html')
     .pipe( copy( config.paths.distribution, { prefix : 10 } ) )
+    .pipe(livereload())
     .pipe(notify({ message: 'Copy html task complete' }));
 });
 
 // Watch task
 gulp.task('watch', function() {
+  // Create LiveReload server
+  livereload.listen();
   // Watch .scss files
   gulp.watch(config.paths.source + '/scss/**/*.scss', ['css']);
   // Watch .js files
@@ -108,12 +115,6 @@ gulp.task('watch', function() {
   gulp.watch(config.paths.source + '/*.html', ['cp-html']);
   // Watch fonts files
   gulp.watch(config.paths.source + '/fonts', ['cp-fonts']);
-
-// LiveReload
-  // Create LiveReload server
-  livereload.listen();
-  // Watch any files in dist/, reload on change
-  gulp.watch([config.paths.source + '/**']).on('change', livereload.changed);
 });
 
 // The default task for build
