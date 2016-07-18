@@ -8,19 +8,23 @@ This my personal front-end gulp boilerplate.
 
 Copy the following files :
 
-- app <!-- work directory  -->
-   - index.html
-   - css
-   - fonts <!-- copy/paste your fonts here -->
-   - img
-   - js
-   - scss
-- .gitignore <!-- to ignore bower_components and node_modules folders -->
-- .jshintrc <!-- for gulp-jshint errors -->
-- gulp-config.json
-- gulpfile.js
-- package.json
-- README.md
+.
+├── ...
+├── app                     # work directory
+│   ├── index.html
+│   ├── css
+│   ├── fonts               # copy/paste your fonts here
+│   ├── img
+│   ├── js
+│   ├── scss
+│   ├── ...  
+├── .gitignore              # to ignore bower_components and node_modules folders
+├── .jshintrc               # for gulp-jshint errors
+├── gulp-config.json
+├── gulpfile.js
+├── package.json
+├── README.md
+└── ...
 
 
 ### Step 2
