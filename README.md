@@ -11,6 +11,7 @@ Copy the following files :
 - app <!-- work directory  -->
    - index.html
    - css
+   - fonts <!-- copy/paste your fonts here -->
    - img
    - js
    - scss
