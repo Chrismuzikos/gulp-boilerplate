@@ -8,6 +8,7 @@ This my personal front-end gulp boilerplate.
 
 Copy the following files :
 
+```
 .
 ├── ...
 ├── app                     # work directory
@@ -25,7 +26,7 @@ Copy the following files :
 ├── package.json
 ├── README.md
 └── ...
-
+```
 
 ### Step 2
 
