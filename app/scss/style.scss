@@ -28,34 +28,8 @@
 @import "layout/header";
 @import "layout/navbar";
 @import "layout/about";
-@import "layout/ingredients";
-@import "layout/menu";
-@import "layout/reviews";
-@import "layout/reservations";
 @import "layout/footer";
 
 @import "module/form";
 @import "module/button";
 @import "module/item";
-
-.color-theme { color: $color-theme; }
-
-.color-theme-dark { color: $color-theme-dark; }
-
-.border {
-  padding-top: 15px;
-  border-top: 1px solid rgba($color-theme, 0.75);
-
-}
-
-.img-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.circle {
-  width: 100px;
-  height: 100px;
-  border: 5px solid #494d4e;
-}
