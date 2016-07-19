@@ -65,7 +65,7 @@ gulp.task('js', function() {
     .pipe(jshint.reporter('default'))
     .pipe(concat('script.min.js'))
     .pipe(gulp.dest(config.paths.distribution + '/js'))
-    .pipe(rename({suffix: '.min'}))
+    // .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('.'))

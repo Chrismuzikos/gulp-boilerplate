@@ -63,6 +63,8 @@ In a terminal, go into your folder project and run the following commands :
 ```
 npm install
 
+(step 4)
+
 gulp
 ```
 
