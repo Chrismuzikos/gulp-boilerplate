@@ -6,7 +6,7 @@ This my personal front-end gulp boilerplate.
 
 ### Step 1
 
-Copy the following files :
+Download .zip. The folder content the following files :
 
 ```
 .
@@ -28,6 +28,9 @@ Copy the following files :
 │   │   │   ├── ...
 │   │   ├── module
 │   │   │   ├── ...
+│   │   ├── utilities
+│   │   │   ├── _fonts.scss
+│   │   │   ├── ...
 │   │   ├── ...
 │   ├── ...  
 ├── .gitignore              # to ignore bower_components and node_modules folders
@@ -41,6 +44,20 @@ Copy the following files :
 
 ### Step 2
 
+Unzip the folder and rename it :
+
+```
+mv gulp-boilerplate/ newProjectName/
+```
+
+Change the README.md file :
+
+```
+echo "# newProjectName" > README.md
+```
+
+### Step 3
+
 In a terminal, go into your folder project and run the following commands :
 
 ```
@@ -49,7 +66,7 @@ npm install
 gulp
 ```
 
-### Step 3
+### Step 4
 
 If you need to use Bower, run the following commands :
 
@@ -77,6 +94,10 @@ and fill the path of the css and js files in the file gulp-config.json like this
 			"bower_components/jquery/dist/jquery.js",
 			"bower_components/bootstrap/dist/js/bootstrap.js",
 			"bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"
+		],
+		"vendorfonts": [
+			"bower_components/bootstrap-sass-official/assets/fonts/**/*",
+			"bower_components/font-awesome/fonts/**/*"
 		]
 	}
 }
